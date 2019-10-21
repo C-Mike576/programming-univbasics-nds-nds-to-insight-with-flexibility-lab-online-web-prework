@@ -108,6 +108,7 @@ def movies_with_directors_set(source)
       inner_array_array << movie_hash[:movies]
       movie_index += 1
     end
+    p inner_array
     total_array << movies_with_director_key(source[name_index][:name], inner_array)
     name_index += 1
   end
