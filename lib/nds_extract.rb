@@ -54,7 +54,7 @@ def movies_with_director_key(name, movies_collection)
     movies_collection[movie_index][:director_name] = name
     movie_index += 1
   end
-  p movies_collection 
+  movies_collection 
 end
 
 
@@ -80,7 +80,7 @@ def gross_per_studio(collection)
     end
     movie_index += 1
   end
-  p new_hash
+  new_hash
 end
 
 def movies_with_directors_set(source)
@@ -124,10 +124,9 @@ end
 # ----------------    End of Your Code Region --------------------
 # Don't edit the following code! Make the methods above work with this method
 # call code. You'll have to "see-saw" to get this to work!
-=begin
+
 def studios_totals(nds)
   a_o_a_movies_with_director_names = movies_with_directors_set(nds)
   movies_with_director_names = flatten_a_o_a(a_o_a_movies_with_director_names)
   return gross_per_studio(movies_with_director_names)
 end
-=end
