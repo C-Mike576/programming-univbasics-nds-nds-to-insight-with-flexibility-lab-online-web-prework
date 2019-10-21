@@ -56,8 +56,8 @@ def movies_with_director_key(name, movies_collection)
     new_hash[movies_collection[movie_index]] = movie_with_director_name(name, movie_collection)
     movie_index += 1
   end
-  pp new_hash
-  pp movies_collection
+  p new_hash
+  p movies_collection
 end
 
 
