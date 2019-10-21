@@ -105,10 +105,9 @@ def movies_with_directors_set(source)
     movie_index = 0
     while movie_index < source[name_index][:movies].length do
         movie_hash[:movies] = source[name_index][:movies][movie_index]
-      inner_array_array << movie_hash[:movies]
+      inner_array << movie_hash[:movies]
       movie_index += 1
     end
-    p inner_array
     total_array << movies_with_director_key(source[name_index][:name], inner_array)
     name_index += 1
   end
