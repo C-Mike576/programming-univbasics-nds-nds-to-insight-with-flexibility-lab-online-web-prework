@@ -49,16 +49,15 @@ def movies_with_director_key(name, movies_collection)
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
   #p movies_collection[0]
-  pp movies_collection
-  pp name
+
   
   movie_index = 0
   while movie_index < movies_collection.length do
     puts new_hash
-    movies_collection[movie_index] = 
+    movies_collection[movie_index] = movie_with_director_name(name, movies_collection)
     movie_index += 1
   end
-  
+ p movies_collection 
 end
 
 
