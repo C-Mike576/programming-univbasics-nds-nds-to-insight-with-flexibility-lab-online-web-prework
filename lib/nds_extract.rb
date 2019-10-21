@@ -1,5 +1,6 @@
 # Provided, don't edit
 require 'directors_database'
+require 'pry'
 
 # A method we're giving you. This "flattens"  Arrays of Arrays so: [[1,2],
 # [3,4,5], [6]] => [1,2,3,4,5,6].
@@ -48,6 +49,13 @@ def movies_with_director_key(name, movies_collection)
   # Array of Hashes where each Hash represents a movie; however, they should all have a
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
+
+  movie_index = 0
+  while movie_index < movies_collection.length do
+    movies_collection[movie_index][:director_name] = name
+    movie_index += 1
+  end
+  movies_collection 
 end
 
 
@@ -63,6 +71,17 @@ def gross_per_studio(collection)
   #
   # Hash whose keys are the studio names and whose values are the sum
   # total of all the worldwide_gross numbers for every movie in the input Hash
+  movie_index = 0
+  new_hash = {}
+  while movie_index < collection.length do
+    if new_hash[collection[movie_index][:studio]]
+      new_hash[collection[movie_index][:studio]] += collection[movie_index][:worldwide_gross]
+    else
+      new_hash[collection[movie_index][:studio]] = collection[movie_index][:worldwide_gross]
+    end
+    movie_index += 1
+  end
+  new_hash
 end
 
 def movies_with_directors_set(source)
@@ -76,7 +95,32 @@ def movies_with_directors_set(source)
   #
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
+  #source =>
+  #[{:name=>"Byron Poodle", :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]}, {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
+
+
+  total_array = []
+  name_index = 0
+  while name_index < source.length do
+    inner_array = []
+    movie_hash = {}
+    movie_index = 0
+    while movie_index < source[name_index][:movies].length do
+        movie_hash[:movies] = source[name_index][:movies][movie_index]
+      inner_array << movie_hash[:movies]
+      movie_index += 1
+    end
+    total_array << movies_with_director_key(source[name_index][:name], inner_array)
+    name_index += 1
+  end
+  total_array
 end
+
+
+
+
+
+
 
 # ----------------    End of Your Code Region --------------------
 # Don't edit the following code! Make the methods above work with this method
