@@ -54,7 +54,7 @@ def movies_with_director_key(name, movies_collection)
     movies_collection[movie_index][:director_name] = name
     movie_index += 1
   end
-  movies_collection 
+  p movies_collection 
 end
 
 
