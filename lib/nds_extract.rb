@@ -106,7 +106,7 @@ def movies_with_directors_set(source)
     end
     
     p movie_array
-    movies_with_director_key(source[name_index][:name], movie_array)
+    p movies_with_director_key(source[name_index][:name], movie_array)
     name_index += 1
   end
   
