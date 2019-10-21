@@ -80,7 +80,7 @@ def gross_per_studio(collection)
     end
     movie_index += 1
   end
-  new_hash
+  p new_hash
 end
 
 def movies_with_directors_set(source)
@@ -112,7 +112,7 @@ def movies_with_directors_set(source)
     total_array << movies_with_director_key(source[name_index][:name], inner_array)
     name_index += 1
   end
-  p total_array
+  total_array
 end
 
 
