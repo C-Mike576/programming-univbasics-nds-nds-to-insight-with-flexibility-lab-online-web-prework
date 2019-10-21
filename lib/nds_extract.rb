@@ -113,7 +113,7 @@ def movies_with_directors_set(source)
     
     name_index += 1
   end
-   total_array
+  p total_array
 end
 
 
