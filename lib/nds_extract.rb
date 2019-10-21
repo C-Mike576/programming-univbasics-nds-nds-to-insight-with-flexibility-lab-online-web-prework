@@ -53,6 +53,7 @@ def movies_with_director_key(name, movies_collection)
   new_hash = movies_collection
   movie_index = 0
   while movie_index < movies_collection.length do
+    puts new_hash
     new_hash[movies_collection[movie_index][:title]] = movie_with_director_name(name, movie_collection)
     movie_index += 1
   end
