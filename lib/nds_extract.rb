@@ -94,7 +94,7 @@ def movies_with_directors_set(source)
   #
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
-  p source
+  
   total_array = []
   name_index = 0
   while name_index < source.length do
@@ -111,7 +111,7 @@ def movies_with_directors_set(source)
    total_array
 end
 
-#[{:name=>"Byron Poodle", :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]}, {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
+
 
 
 
