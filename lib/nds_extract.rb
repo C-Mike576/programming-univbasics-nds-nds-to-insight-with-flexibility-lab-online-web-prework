@@ -50,6 +50,7 @@ def movies_with_director_key(name, movies_collection)
   # movie_with_director_name method
   #p movies_collection[0]
   pp movies_collection
+  pp name
 =begin
   new_array = []
   new_hash = movies_collection
