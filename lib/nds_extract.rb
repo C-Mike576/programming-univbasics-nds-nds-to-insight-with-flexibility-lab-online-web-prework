@@ -78,9 +78,10 @@ def gross_per_studio(collection)
   p collection
   p collection[0]
 =begin
+
   name_index = 0
   while name_index < collection.length do
-    studio_gross = 0
+    
     movie_index = 0
     while movie_index < collection[name_index].length do
         studio_gross += collection[name_index][:movies][movie_index][:worldwide_gross]
