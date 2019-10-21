@@ -51,17 +51,13 @@ def movies_with_director_key(name, movies_collection)
   #p movies_collection[0]
   pp movies_collection
   pp name
-=begin
-  new_array = []
-  new_hash = movies_collection
+  
   movie_index = 0
   while movie_index < movies_collection.length do
     puts new_hash
-    new_hash[movies_collection[movie_index]] = movie_with_director_name(name, movie_collection)
+    movies_collection[movie_index] = 
     movie_index += 1
   end
-  p new_hash
-=end
   
 end
 
